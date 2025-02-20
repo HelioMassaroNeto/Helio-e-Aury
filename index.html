@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>❤️ Hélio e Aury ❤️</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000;
+      color: #f8f8f8;
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.3rem;
+      line-height: 1.8;
+      padding: 20px;
+      overflow-x: hidden;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .title h1 {
+      font-size: 2.8rem;
+      color: #ff6b81;
+    }
+
+    .title h2 {
+      font-size: 1.6rem;
+      color: #f8f8f8;
+      margin-top: 5px;
+    }
+
+    .counter {
+      text-align: center;
+      margin-top: 40px;
+      padding: 15px;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .counter span {
+      display: block;
+      font-size: 1.4rem;
+      margin: 6px 0;
+    }
+
+    p {
+      margin-bottom: 25px;
+      text-align: justify;
+    }
+
+    .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .heart {
+      position: absolute;
+      color: #ff6b81;
+      font-size: 20px;
+      animation: floatUp 7s linear infinite;
+      opacity: 0.6;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(100vh) scale(0.6); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="title">
+    <h1>❤️ Hélio e Aury ❤️</h1>
+    <h2>Nossa História</h2>
+  </div>
+
+  <p>
+    Desde o dia em que nos conhecemos, quando começamos a nos flertar, tudo mudou em mim. Lembro da nossa primeira viagem, do primeiro beijo, daquele misto de desejo e receio. Desde a primeira ficada, o sentimento só cresceu: a cada abraço, conversa, risada e saída escondida. O amor que sinto por você se tornou tão forte que me sinto o homem mais realizado do mundo. Tenho ao meu lado a mulher mais maravilhosa, linda, engraçada e perfeita que poderia querer. Você é um sonho que, às vezes, nem acredito ser real. Te amo mais do que imagina! ❤️
+  </p>
+
+  <div class="counter">
+    <h2>Tempo juntos desde 15/12/2023 💖</h2>
+    <span id="years">Anos: 0</span>
+    <span id="months">Meses: 0</span>
+    <span id="days">Dias: 0</span>
+    <span id="hours">Horas: 0</span>
+    <span id="minutes">Minutos: 0</span>
+    <span id="seconds">Segundos: 0</span>
+  </div>
+
+  <div class="hearts" id="hearts"></div>
+
+  <audio id="backgroundMusic" autoplay loop>
+    <source src="spotidownloader.com - Tennessee Whiskey - Chris Stapleton.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <script>
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.innerHTML = '❤️';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.fontSize = (Math.random() * 15 + 20) + 'px';
+      document.getElementById('hearts').appendChild(heart);
+      setTimeout(() => heart.remove(), 7000);
+    }
+
+    setInterval(createHeart, 350);
+
+    function updateCounter() {
+      const startDate = new Date('2023-12-15T00:00:00');
+      const now = new Date();
+      const diff = now - startDate;
+
+      const seconds = Math.floor(diff / 1000) % 60;
+      const minutes = Math.floor(diff / (1000 * 60)) % 60;
+      const hours = Math.floor(diff / (1000 * 60 * 60)) % 24;
+      const totalDays = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+      const years = Math.floor(totalDays / 365.25);
+      const months = Math.floor((totalDays % 365.25) / 30.44);
+      const days = Math.floor((totalDays % 365.25) % 30.44);
+
+      document.getElementById('years').innerText = `Anos: ${years}`;
+      document.getElementById('months').innerText = `Meses: ${months}`;
+      document.getElementById('days').innerText = `Dias: ${totalDays}`;
+      document.getElementById('hours').innerText = `Horas: ${hours}`;
+      document.getElementById('minutes').innerText = `Minutos: ${minutes}`;
+      document.getElementById('seconds').innerText = `Segundos: ${seconds}`;
+    }
+
+    setInterval(updateCounter, 1000);
+
+    window.onload = () => {
+      const music = document.getElementById('backgroundMusic');
+      music.play().catch(() => {
+        document.body.addEventListener('click', () => music.play(), { once: true });
+      });
+      updateCounter();
+    };
+  </script>
+</body>
+</html>
