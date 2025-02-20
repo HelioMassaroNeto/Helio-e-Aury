@@ -14,8 +14,8 @@
     body {
       background-color: #000;
       color: #f8f8f8;
-      font-family: 'Dancing Script', cursive;
-      font-size: 1.3rem;
+      font-family: 'Nunito', sans-serif; /* Fonte arredondada */
+      font-size: 1.2rem;
       line-height: 1.8;
       padding: 20px;
       overflow-x: hidden;
@@ -29,12 +29,14 @@
     .title h1 {
       font-size: 2.8rem;
       color: #ff6b81;
+      font-weight: 700; /* Peso da fonte ajustado */
     }
 
     .title h2 {
       font-size: 1.6rem;
       color: #f8f8f8;
       margin-top: 5px;
+      font-weight: 400; /* Peso da fonte ajustado */
     }
 
     .counter {
@@ -49,11 +51,13 @@
       display: block;
       font-size: 1.4rem;
       margin: 6px 0;
+      font-weight: 300; /* Peso da fonte ajustado */
     }
 
     p {
       margin-bottom: 25px;
       text-align: justify;
+      font-weight: 300; /* Peso da fonte ajustado */
     }
 
     .hearts {
@@ -80,13 +84,71 @@
       50% { opacity: 1; }
       100% { transform: translateY(-10vh) scale(1); opacity: 0; }
     }
+
+    /* Estilos do Carrossel */
+    .carousel {
+      position: relative;
+      max-width: 800px;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(255, 107, 129, 0.3);
+    }
+
+    .carousel-inner {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel img {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+    }
+
+    .carousel button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(255, 107, 129, 0.7);
+      border: none;
+      color: #fff;
+      font-size: 1.5rem;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: background-color 0.3s;
+    }
+
+    .carousel button:hover {
+      background-color: rgba(255, 107, 129, 1);
+    }
+
+    .carousel button.prev {
+      left: 10px;
+    }
+
+    .carousel button.next {
+      right: 10px;
+    }
   </style>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet"> <!-- Link para a fonte Nunito -->
 </head>
 <body>
   <div class="title">
     <h1>❤️ Hélio e Aury ❤️</h1>
     <h2>Nossa História</h2>
+  </div>
+
+  <!-- Carrossel de Fotos -->
+  <div class="carousel">
+    <div class="carousel-inner">
+      <img src="foto1.jpg" alt="Foto 1"> <!-- Substitua pelo caminho da sua foto -->
+      <img src="foto2.jpg" alt="Foto 2"> <!-- Substitua pelo caminho da sua foto -->
+      <img src="foto3.jpg" alt="Foto 3"> <!-- Substitua pelo caminho da sua foto -->
+    </div>
+    <button class="prev" onclick="prevSlide()">❮</button>
+    <button class="next" onclick="nextSlide()">❯</button>
   </div>
 
   <p>
@@ -111,6 +173,28 @@
   </audio>
 
   <script>
+    // Funções para o Carrossel
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-inner img');
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+      const carouselInner = document.querySelector('.carousel-inner');
+      const offset = -index * 100;
+      carouselInner.style.transform = `translateX(${offset}%)`;
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      showSlide(currentSlide);
+    }
+
+    // Funções para os corações
     function createHeart() {
       const heart = document.createElement('div');
       heart.classList.add('heart');
@@ -123,6 +207,7 @@
 
     setInterval(createHeart, 350);
 
+    // Função para o contador
     function updateCounter() {
       const startDate = new Date('2023-12-15T00:00:00');
       const now = new Date();
@@ -147,6 +232,7 @@
 
     setInterval(updateCounter, 1000);
 
+    // Iniciar música e contador
     window.onload = () => {
       const music = document.getElementById('backgroundMusic');
       music.play().catch(() => {
