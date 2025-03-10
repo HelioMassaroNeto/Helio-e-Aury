@@ -18,6 +18,8 @@
       font-size: 1.2rem;
       line-height: 1.8;
       padding: 20px;
+     
+   
       overflow-x: hidden;
       border: 2px solid #ff6b81; /* Borda decorativa */
       border-radius: 15px; /* Bordas arredondadas */
@@ -102,41 +104,34 @@
     /* Estilos do Carrossel */
     .carousel {
       position: relative;
-      width: 48%;
-      margin: 1%;
+      width: 35%;
+      margin: 1% auto; /* Define margens automáticas nas laterais para centralizar */
       overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(255, 107, 129, 0.3);
-      aspect-ratio: 16 / 9;
-      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito de hover */
-    }
+     
+      transition: transform 1.3s ease, box-shadow 1.3s ease;
+}
 
     .carousel:hover {
-      transform: scale(1.02); /* Efeito de zoom */
-      box-shadow: 0 8px 20px rgba(255, 107, 129, 0.5); /* Sombra mais intensa */
+      transform: scale(1.02);
     }
 
     .carousel-inner {
       display: flex;
-      transition: transform 0.5s ease-in-out;
+      transition: transform 1s ease-in-out;
       height: 100%;
     }
 
     .carousel img {
       width: 100%;
-      height: 100%;
+      height: auto; /* Mantém a proporção da imagem */
+      display: block; /* Remove espaços extras ao redor da imagem */
       object-fit: cover;
       flex-shrink: 0;
-      border-radius: 10px;
-      filter: brightness(0.9); /* Efeito de brilho */
-      transition: filter 0.3s ease; /* Transição suave */
+           filter: brightness(0.9);
+      transition: filter 5.9s ease;
     }
 
-    .carousel img:hover {
-      filter: brightness(1.1); /* Efeito de brilho ao passar o mouse */
-    }
-
-    /* Estilos para os tópicos */
+      /* Estilos para os tópicos */
     .topic {
       margin: 40px 0;
     }
@@ -208,9 +203,24 @@ com a pessoa certa, cada dia é um novo motivo para amar ainda mais.
       <h3>Nossa primeira vez/viagem juntos</h3>
       <div class="carousel">
         <div class="carousel-inner">
-          <img src="https://raw.githubusercontent.com/seu-usuario/seu-repositorio/main/pasta/foto1.jpg" alt="Foto 1">
-          <img src="https://raw.githubusercontent.com/seu-usuario/seu-repositorio/main/pasta/foto2.jpg" alt="Foto 2">
-          <img src="https://raw.githubusercontent.com/seu-usuario/seu-repositorio/main/pasta/foto3.jpg" alt="Foto 3">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\01parati 1x\1741457090984.jpg" alt="Foto 1">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\01parati 1x\1741457090991.jpg" alt="Foto 1">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\01parati 1x\1741457091213.jpg" alt="Foto 1">
+          
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\01parati 1x\Screenshot_1.png" alt="Foto 1">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\01parati 1x\Screenshot_10.png" alt="Foto 1">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\01parati 1x\Screenshot_12.png" alt="Foto 1">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\01parati 1x\Screenshot_13.png" alt="Foto 1">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\01parati 1x\Screenshot_14.png" alt="Foto 1">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\01parati 1x\Screenshot_15.png" alt="Foto 1">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\01parati 1x\Screenshot_16.png" alt="Foto 1">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\01parati 1x\Screenshot_19.png" alt="Foto 1">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\01parati 1x\Screenshot_20.png" alt="Foto 1">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\01parati 1x\Screenshot_34.png" alt="Foto 1">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\01parati 1x\Screenshot_51.png" alt="Foto 1">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\01parati 1x\WhatsApp Image 2025-02-20 at 10.01.15 (4).jpeg" alt="Foto 1">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\01parati 1x\WhatsApp Image 2025-02-20 at 10.01.17.jpeg" alt="Foto 1">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\01parati 1x\1741457091219.jpg" alt="Foto 1">
         </div>
       </div>
       <p>Nosso primeiro contato, primeiro beijo, primeira noite juntos... 
@@ -224,9 +234,16 @@ com a pessoa certa, cada dia é um novo motivo para amar ainda mais.
       <h3>O tão esperado show do Maneva</h3>
       <div class="carousel">
         <div class="carousel-inner">
-          <img src="https://raw.githubusercontent.com/seu-usuario/seu-repositorio/main/pasta/foto1.jpg" alt="Foto 1">
-          <img src="https://raw.githubusercontent.com/seu-usuario/seu-repositorio/main/pasta/foto2.jpg" alt="Foto 2">
-          <img src="https://raw.githubusercontent.com/seu-usuario/seu-repositorio/main/pasta/foto3.jpg" alt="Foto 3">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\02show do Maneva\Screenshot_3.png" alt="Foto 1">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\02show do Maneva\Screenshot_35.png" alt="Foto 1">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\02show do Maneva\Screenshot_36.png" alt="Foto 1">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\02show do Maneva\Screenshot_37.png" alt="Foto 1">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\02show do Maneva\Screenshot_1.png" alt="Foto 1">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\02show do Maneva\Screenshot_2.png" alt="Foto 1">
+          
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\02show do Maneva\Screenshot_4.png" alt="Foto 1">
+          
+          
         </div>
       </div>
       <p>A realização de um sonho no dia do meu aniversário. Foi uma noite muito especial 
@@ -240,9 +257,12 @@ com a pessoa certa, cada dia é um novo motivo para amar ainda mais.
       <h3>A frienta Pedra da Macela</h3>
       <div class="carousel">
         <div class="carousel-inner">
-          <img src="https://raw.githubusercontent.com/seu-usuario/seu-repositorio/main/pasta/foto1.jpg" alt="Foto 1">
-          <img src="https://raw.githubusercontent.com/seu-usuario/seu-repositorio/main/pasta/foto2.jpg" alt="Foto 2">
-          <img src="https://raw.githubusercontent.com/seu-usuario/seu-repositorio/main/pasta/foto3.jpg" alt="Foto 3">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\03Pedra da Macela\1741457091036.jpg" alt="Foto 1">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\03Pedra da Macela\Screenshot_39.png" alt="Foto 1">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\03Pedra da Macela\Screenshot_38.png" alt="Foto 1">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\03Pedra da Macela\Screenshot_18.png" alt="Foto 1">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\03Pedra da Macela\Screenshot_17.png" alt="Foto 1">
+          
         </div>
       </div>
       <p>Nossa segunda viagem juntos. Apesar dos muitos obstáculos, 
@@ -254,9 +274,14 @@ com a pessoa certa, cada dia é um novo motivo para amar ainda mais.
       <h3>Momentos mágicos na Praia de Santos</h3>
       <div class="carousel">
         <div class="carousel-inner">
-          <img src="https://raw.githubusercontent.com/seu-usuario/seu-repositorio/main/pasta/foto1.jpg" alt="Foto 1">
-          <img src="https://raw.githubusercontent.com/seu-usuario/seu-repositorio/main/pasta/foto2.jpg" alt="Foto 2">
-          <img src="https://raw.githubusercontent.com/seu-usuario/seu-repositorio/main/pasta/foto3.jpg" alt="Foto 3">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\04Praia de Santos\1741457091201.jpg" alt="Foto 1">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\04Praia de Santos\1741457091207.jpg" alt="Foto 1">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\04Praia de Santos\Screenshot_21.png" alt="Foto 1">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\04Praia de Santos\Screenshot_22.png" alt="Foto 1">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\04Praia de Santos\Screenshot_23.png" alt="Foto 1">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\04Praia de Santos\Screenshot_24.png" alt="Foto 1">
+          
+          
         </div>
       </div>
       <p>O amor fluía como as ondas do mar. A vontade de estarmos juntos falava mais alto, 
@@ -270,9 +295,19 @@ com a pessoa certa, cada dia é um novo motivo para amar ainda mais.
       <h3>A incrível viagem para Angra dos Reis</h3>
       <div class="carousel">
         <div class="carousel-inner">
-          <img src="https://raw.githubusercontent.com/seu-usuario/seu-repositorio/main/pasta/foto1.jpg" alt="Foto 1">
-          <img src="https://raw.githubusercontent.com/seu-usuario/seu-repositorio/main/pasta/foto2.jpg" alt="Foto 2">
-          <img src="https://raw.githubusercontent.com/seu-usuario/seu-repositorio/main/pasta/foto3.jpg" alt="Foto 3">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\05Angra dos Reis\1.jpg" alt="Foto 1">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\05Angra dos Reis\3.jpg" alt="Foto 1">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\05Angra dos Reis\4.jpg" alt="Foto 1">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\05Angra dos Reis\5.jpg" alt="Foto 1">
+
+            <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\05Angra dos Reis\2.png" alt="Foto 1">
+            <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\05Angra dos Reis\6.png" alt="Foto 1">
+            <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\05Angra dos Reis\8.png" alt="Foto 1">
+            <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\05Angra dos Reis\9.png" alt="Foto 1">
+            <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\05Angra dos Reis\10.png" alt="Foto 1">
+            <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\05Angra dos Reis\11.png" alt="Foto 1">
+            <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\05Angra dos Reis\7.webp" alt="Foto 1">
+  
         </div>
       </div>
       <p>Essa viagem ficou gravada em nossos corações e mentes. Tudo era perfeito: as praias, 
@@ -284,9 +319,21 @@ com a pessoa certa, cada dia é um novo motivo para amar ainda mais.
       <h3>Voltando ao paraíso de Paraty</h3>
       <div class="carousel">
         <div class="carousel-inner">
-          <img src="https://raw.githubusercontent.com/seu-usuario/seu-repositorio/main/pasta/foto1.jpg" alt="Foto 1">
-          <img src="https://raw.githubusercontent.com/seu-usuario/seu-repositorio/main/pasta/foto2.jpg" alt="Foto 2">
-          <img src="https://raw.githubusercontent.com/seu-usuario/seu-repositorio/main/pasta/foto3.jpg" alt="Foto 3">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\06Paraty 2x\1.png" alt="Foto 1">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\06Paraty 2x\2.png" alt="Foto 2">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\06Paraty 2x\3.jpg" alt="Foto 3">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\06Paraty 2x\4.jpg" alt="Foto 4">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\06Paraty 2x\5.jpg" alt="Foto 5">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\06Paraty 2x\6.webp" alt="Foto 6">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\06Paraty 2x\7.webp" alt="Foto 7">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\06Paraty 2x\8.png" alt="Foto 8">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\06Paraty 2x\9.png" alt="Foto 9">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\06Paraty 2x\10.png" alt="Foto 10">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\06Paraty 2x\11.png" alt="Foto 11">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\06Paraty 2x\12.png" alt="Foto 12">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\06Paraty 2x\13.png" alt="Foto 13">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\06Paraty 2x\14.png" alt="Foto 14">
+          <img src="C:\Users\suporte2\Desktop\Helio\Docs\Pessoal\hea\fotos\06Paraty 2x\15.png" alt="Foto 15">
         </div>
       </div>
       <p>Quando a gente se apaixona, a gente volta. Essa frase descreve perfeitamente esse lugar 
